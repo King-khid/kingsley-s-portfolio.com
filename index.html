@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/YOUR_FA_KIT_CODE.js" crossorigin="anonymous"></script>
+    <script>
+        // Enable dark mode toggle
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+        }
+
+        // Show/hide scroll-to-top button
+        window.addEventListener("scroll", function () {
+            const scrollTopBtn = document.getElementById("scrollTopBtn");
+            if (window.scrollY > 200) {
+                scrollTopBtn.classList.remove("hidden");
+            } else {
+                scrollTopBtn.classList.add("hidden");
+            }
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full bg-white dark:bg-gray-800 shadow-md py-4 z-50">
+        <div class="container mx-auto flex justify-between px-6">
+            <h1 class="text-xl font-bold">My Portfolio</h1>
+            <button onclick="toggleDarkMode()" class="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded">Dark Mode</button>
+        </div>
+    </nav>
+
+   <!-- Hero Section -->
+<!-- Hero Section -->
+<section id="home" class="h-screen flex flex-col md:flex-row items-center justify-center text-center bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 opacity-0 animate-fade-in">
+    <!-- Left Side: Profile Image -->
+    <div class="md:w-1/2 flex justify-center animate-slide-in-left">
+        <img src="pic one.jpg" alt="Your Image" class="w-60 h-60 rounded-full shadow-lg border-4 border-white">
+    </div>
+
+    <!-- Right Side: Centered Text & Socials -->
+    <div class="md:w-1/2 flex flex-col items-center text-center space-y-4 animate-slide-in-right">
+        <h1 class="text-5xl font-extrabold">Welcome to My Portfolio</h1>
+        <p class="text-lg font-light">Full-Stack Developer | Problem Solver | Tech Enthusiast</p>
+
+        <!-- Call-to-Action Buttons -->
+        <div class="mt-4 flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+            <a href="#about" class="px-6 py-2 bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-200 transition">Learn More</a>
+            <a href="resume.pdf" download class="px-6 py-2 border border-white rounded-lg shadow-md hover:bg-white hover:text-blue-600 transition">Download Resume</a>
+        </div>
+
+        
+       <!-- Social Media Links -->
+<div class="mt-6 flex space-x-6">
+    <a href="https://github.com/king-khid" target="_blank" class="text-white hover:text-gray-300 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 .5c-6.63 0-12 5.37-12 12 0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.02c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.74.08-.73.08-.73 1.2.08 1.83 1.22 1.83 1.22 1.07 1.82 2.81 1.3 3.5.99.11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.96 0-1.32.47-2.41 1.22-3.26-.12-.3-.53-1.52.12-3.17 0 0 1-.32 3.3 1.23.96-.27 2-.4 3.03-.4s2.07.13 3.03.4c2.31-1.55 3.3-1.23 3.3-1.23.65 1.65.24 2.87.12 3.17.76.85 1.22 1.94 1.22 3.26 0 4.63-2.81 5.65-5.48 5.95.43.37.82 1.1.82 2.22v3.3c0 .32.22.7.82.58 4.77-1.59 8.21-6.09 8.21-11.39 0-6.63-5.37-12-12-12z"/>
+        </svg>
+    </a>
+    <a href="https://linkedin.com/in/kingsley Thompson" target="_blank" class="text-white hover:text-gray-300 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4.98 3.5c0 1.38-1.12 2.5-2.5 2.5S0 4.88 0 3.5 1.12 1 2.48 1s2.5 1.12 2.5 2.5zM.5 24V8h4.93v16H.5zm7.47 0h4.94v-8.17c0-4.5 5.52-4.86 5.52 0V24h4.94V13.46c0-7.17-8.47-6.91-10.94-3.37V8H7.97v16z"/>
+        </svg>
+    </a>
+    <a href="https://twitter.com/yourusername" target="_blank" class="text-white hover:text-gray-300 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 4.56c-.89.39-1.84.65-2.83.77a4.94 4.94 0 0 0 2.16-2.72 9.72 9.72 0 0 1-3.12 1.19 4.89 4.89 0 0 0-8.31 4.46A13.89 13.89 0 0 1 1.67 3.15a4.88 4.88 0 0 0 1.52 6.52c-.8-.03-1.57-.25-2.23-.62v.06a4.89 4.89 0 0 0 3.92 4.8c-.73.2-1.49.23-2.24.08a4.88 4.88 0 0 0 4.56 3.39 9.81 9.81 0 0 1-6.07 2.09c-.39 0-.78-.02-1.17-.07a13.86 13.86 0 0 0 7.54 2.21c9.06 0 14.02-7.5 14.02-14.02 0-.21 0-.42-.02-.62A10.06 10.06 0 0 0 24 4.56z"/>
+        </svg>
+    </a>
+</div>
+
+</section>
+
+<!-- Tailwind CSS Animations -->
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .animate-fade-in {
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes slideInLeft {
+        from { transform: translateX(-50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in-left {
+        animation: slideInLeft 1s ease-out forwards;
+    }
+
+    @keyframes slideInRight {
+        from { transform: translateX(50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in-right {
+        animation: slideInRight 1s ease-out forwards;
+    }
+</style>
+
+
+</section>
+
+
+    
+  <!-- About Me Section -->
+<section id="about" class="h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-800 px-6 opacity-0 animate-fade-in">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8">
+        <!-- Image Container -->
+        <div class="w-full md:w-1/3 flex justify-center animate-slide-in-left">
+            <img src="pic one.jpg" alt="Your Image" class="w-64 h-64 rounded-lg shadow-lg">
+        </div>
+
+        <!-- Text Containers -->
+        <div class="w-full md:w-2/3 space-y-6 animate-slide-in-right">
+            <!-- Introduction -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                <h2 class="text-3xl font-bold">About Me</h2>
+                <p class="mt-2">Hello! I'm Kingsley Fynn Thompson, a passionate student pursuing a Bachelor of Information Technology at Takoradi Technical University. I love exploring the world of software development and continuously learning new technologies.</p>
+            </div>
+
+            <!-- Skills & Interests -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold">Skills & Interests</h3>
+                <p class="mt-2">I have experience in full-stack development and enjoy working with Python, Java, JavaScript, Tailwind CSS, and backend technologies. My interests include web development, problem-solving, and building projects that make an impact.</p>
+            </div>
+
+            <!-- Goals -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300">
+                <h3 class="text-2xl font-semibold">My Goals</h3>
+                <p class="mt-2">My goal is to become a skilled developer, work on exciting real-world projects, and contribute to the tech community. I'm always open to collaborating and learning from others.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tailwind CSS Animations -->
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .animate-fade-in {
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    @keyframes slideInLeft {
+        from { transform: translateX(-50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in-left {
+        animation: slideInLeft 1s ease-out forwards;
+    }
+
+    @keyframes slideInRight {
+        from { transform: translateX(50px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+    .animate-slide-in-right {
+        animation: slideInRight 1s ease-out forwards;
+    }
+</style>
+
+
+
+  <!-- Projects Section -->
+<section id="projects" class="py-16 bg-gray-100 dark:bg-gray-800 px-6 opacity-0 animate-fade-in">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-10">My Projects</h2>
+
+        <!-- Project Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 animate-slide-in-left">
+                <img src="pizza.png" alt="Project 1" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-2xl font-semibold mt-4">Project Title 1</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-300">This project is a modern pizza ordering website that allows users to browse a delicious menu, customize their pizzas, and place orders online. </p>
+                <div class="mt-4 flex justify-center space-x-4">
+                    <a href="https://github.com/king-khid" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-lg">GitHub</a>
+                    <a href="https://king-khid.github.io/KT-s-Pizzeria/" class="px-4 py-2 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 animate-slide-in-right">
+                <img src="pizza.png" alt="Project 2" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-2xl font-semibold mt-4">Project Title 2</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-300">This project is a modern pizza ordering website that allows users to browse a delicious menu, customize their pizzas, and place orders online. </p>
+                <div class="mt-4 flex justify-center space-x-4">
+                    <a href="https://github.com/king-khid/project2" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-lg">GitHub</a>
+                    <a href="https://king-khid.github.io/KT-s-Pizzeria/" class="px-4 py-2 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition">Live Demo</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 animate-slide-in-left">
+                <img src="pizza.png" alt="Project 3" class="w-full h-40 object-cover rounded-md">
+                <h3 class="text-2xl font-semibold mt-4">Project Title 3</h3>
+                <p class="mt-2 text-gray-600 dark:text-gray-300">This project is a modern pizza ordering website that allows users to browse a delicious menu, customize their pizzas, and place orders online. </p>
+                <div class="mt-4 flex justify-center space-x-4">
+                    <a href="https://github.com/king-khid/project3" target="_blank" class="px-4 py-2 bg-blue-500 text-white rounded-lg">GitHub</a>
+                    <a href="https://king-khid.github.io/KT-s-Pizzeria/" class="px-4 py-2 border border-blue-500 text-blue-500 rounded-lg hover:bg-blue-500 hover:text-white transition">Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ 
+    <!-- Skills Section -->
+<section id="skills" class="py-16 bg-gray-100 dark:bg-gray-800 px-6">
+    <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-10">My Skills</h2>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <!-- Skill 1 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in">
+                <img src="html5-brands.svg" alt="HTML" class="w-12 mx-auto">
+                <h3 class="text-xl font-semibold mt-4">HTML</h3>
+            </div>
+
+            <!-- Skill 2 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in">
+                <img src="css3-brands.svg" alt="CSS" class="w-12 mx-auto">
+                <h3 class="text-xl font-semibold mt-4">CSS</h3>
+            </div>
+
+            <!-- Skill 3 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in">
+                <img src="js-brands.svg" alt="JavaScript" class="w-12 mx-auto">
+                <h3 class="text-xl font-semibold mt-4">JavaScript</h3>
+            </div>
+
+            <!-- Skill 4 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in">
+                <img src="bootstrap-brands.svg" alt="Tailwind CSS" class="w-12 mx-auto">
+                <h3 class="text-xl font-semibold mt-4">Bootstrap</h3>
+            </div>
+
+            <!-- Skill 5 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in">
+                <img src="react-brands.svg" alt="React.js" class="w-12 mx-auto">
+                <h3 class="text-xl font-semibold mt-4">React.js</h3>
+            </div>
+
+            <!-- Skill 6 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in">
+                <img src="python-brands.svg" alt="Python" class="w-12 mx-auto">
+                <h3 class="text-xl font-semibold mt-4">Python</h3>
+            </div>
+
+            <!-- Skill 7 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in">
+                <img src="java-brands.svg" alt="Java" class="w-12 mx-auto">
+                <h3 class="text-xl font-semibold mt-4">Java</h3>
+            </div>
+
+            <!-- Skill 8 -->
+            <div class="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md hover:scale-105 transition-transform duration-300 animate-fade-in">
+                <img src="node-brands.svg" alt="Node.js" class="w-12 mx-auto">
+                <h3 class="text-xl font-semibold mt-4">Node.js</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tailwind CSS Animations -->
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .animate-fade-in {
+        animation: fadeIn 1.5s ease-in-out forwards;
+    }
+</style>
+
+
+
+     <!-- Contact Section Layout -->
+<section id="contact" class="py-16 bg-gray-100 dark:bg-gray-800">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8">Contact Me</h2>
+
+        <div class="flex flex-col md:flex-row items-center md:items-start justify-center gap-10">
+            
+            <!-- Contact Details (Left Side) -->
+            <div class="bg-white dark:bg-gray-700 p-8 rounded-lg shadow-md w-full md:w-1/3 space-y-8">
+                <div class="flex items-center space-x-4 text-xl">
+                    <p class="font-bold">Name:</p> 
+                    <p class="font-semibold">Kingsley Fynn Thompson</p>
+                </div>
+
+                <div class="flex items-center space-x-4 text-xl">
+                    <i class="fa-solid fa-phone text-2xl"></i> 
+                    <p class="font-semibold">+233 263 455 232</p>
+                </div>
+
+                <div class="flex items-center space-x-4 text-xl">
+                    <i class="fa-solid fa-envelope text-2xl"></i>
+                    <p class="font-semibold">kingkhid60@gmail.com</p>
+                </div>
+
+                <div class="flex items-center space-x-4 text-xl">
+                    <i class="fa-solid fa-location-dot text-2xl"></i> 
+                    <p class="font-semibold">Takoradi, Ghana</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer Section (Separated) -->
+<footer class="bg-gray-900 text-white mt-24 py-8">
+    <div class="container mx-auto text-center space-y-6">
+        <p class="text-lg font-semibold">Follow Me</p>
+        
+        <!-- Social Media Links -->
+        <div class="flex justify-center space-x-8">
+            <a href="https://github.com/yourusername" target="_blank" class="hover:text-gray-400 transition">
+                <i class="fa-brands fa-github text-3xl"></i>
+            </a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="hover:text-gray-400 transition">
+                <i class="fa-brands fa-linkedin text-3xl"></i>
+            </a>
+            <a href="https://twitter.com/yourusername" target="_blank" class="hover:text-gray-400 transition">
+                <i class="fa-brands fa-twitter text-3xl"></i>
+            </a>
+        </div>
+
+        <!-- Copyright Notice -->
+        <p class="text-sm">&copy; 2025 Kingsley Fynn Thompson. All rights reserved.</p>
+    </div>
+</footer>
+
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" class="hidden fixed bottom-6 right-6 bg-blue-500 text-white p-3 rounded-full shadow-lg">
+        ↑
+    </button>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
